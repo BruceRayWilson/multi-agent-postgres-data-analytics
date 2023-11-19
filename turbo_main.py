@@ -130,7 +130,7 @@ def main():
         # .equip_tools(tools)
         .add_message("Generate 10 random facts about LLM technology.")
         .run_thread()
-        .add_message("Use the store_fact function to 1 fact.")
+        .add_message("Use the store_fact function to store 1 fact.")
         .run_thread(toolbox=["store_fact"])
     )
 
