@@ -128,10 +128,14 @@ def main():
         assistant.get_or_create_assistant(assistant_name)
         .make_thread()
         # .equip_tools(tools)
-        .add_message("Generate 10 random facts about LLM technology.")
+        .add_message(raw_prompt)
         .run_thread()
-        .add_message("Use the store_fact function to store 1 fact.")
-        .run_thread(toolbox=["store_fact"])
+        # .add_message("Use the store_fact function to store 1 fact.")
+        # .run_thread(toolbox=["store_fact"])
+    )
+
+    print(
+        f'{assistant.chat_messages}'
     )
 
 
